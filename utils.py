@@ -725,13 +725,13 @@ except SyntaxError:
     have_async_gen = False
 
 
-def soft_unicode(s):
-    from markupsafe import soft_unicode
+def soft_str(s):
+    from markupsafe import soft_str
 
     warnings.warn(
-        "'jinja2.utils.soft_unicode' will be removed in version 3.0."
-        " Use 'markupsafe.soft_unicode' instead.",
+        "'jinja2.utils.soft_str' will be removed in version 3.0."
+        " Use 'markupsafe.soft_str' instead.",
         DeprecationWarning,
         stacklevel=2,
     )
-    return soft_unicode(s)
+    return soft_str(s)
